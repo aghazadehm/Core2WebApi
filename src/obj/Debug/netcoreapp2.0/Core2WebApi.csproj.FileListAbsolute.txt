@@ -1,0 +1,10 @@
+d:\VS_Code\Core2WebApi\src\bin\Debug\netcoreapp2.0\Core2WebApi.deps.json
+d:\VS_Code\Core2WebApi\src\bin\Debug\netcoreapp2.0\Core2WebApi.runtimeconfig.json
+d:\VS_Code\Core2WebApi\src\bin\Debug\netcoreapp2.0\Core2WebApi.runtimeconfig.dev.json
+d:\VS_Code\Core2WebApi\src\bin\Debug\netcoreapp2.0\Core2WebApi.dll
+d:\VS_Code\Core2WebApi\src\bin\Debug\netcoreapp2.0\Core2WebApi.pdb
+d:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.csproj.CoreCompileInputs.cache
+d:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.AssemblyInfoInputs.cache
+d:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.AssemblyInfo.cs
+d:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.dll
+d:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.pdb

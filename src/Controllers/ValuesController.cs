@@ -2,13 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core2WebApi.Common;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace Core2WebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class ValuesController : ControllerBase
     {
+        private readonly ILogger _logger;
+        public ValuesController(ILogger<ValuesController> logger)
+        {
+            _logger = logger;
+        }
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
@@ -18,9 +25,17 @@ namespace Core2WebApi.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            _logger.LogInformation(Constants.LoggingEvents.ListItems, "Getting list items");
+            var res = $"value{id}";
+            res = null;
+            if (res == null)
+            {
+                _logger.LogWarning(Constants.LoggingEvents.GetItemNotFound, "GetById({ID}) NOT FOUND", id);
+                return NotFound();
+            }
+            return Content(res);
         }
 
         // POST api/values
