@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Core2WebApi.Data.Entities
 {
+    [Table("DimBroker")]
     public class Broker
     {
         public Broker()

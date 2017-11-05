@@ -5,7 +5,7 @@ using Core2WebApi.Models;
 using Core2WebApi.Services.BrokersService;
 using Core2WebApi.Services.InquiryProcessing;
 
-namespace Core2WebApi.Services.BrokerService
+namespace Core2WebApi.Services.BrokersService
 {
     public class BrokersService : IBrokersService
     {

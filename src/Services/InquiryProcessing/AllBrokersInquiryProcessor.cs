@@ -9,7 +9,7 @@ using Core2WebApi.Services.InquiryProcessing;
 using PagedBrokerDataInquiryResponse =
     Core2WebApi.Models.PagedDataInquiryResponse<Core2WebApi.Models.Broker>;
 
-namespace imeWebApi.Services.InquiryProcessing
+namespace Core2WebApi.Services.InquiryProcessing
 {
     public class AllBrokersInquiryProcessor : IAllBrokersInquiryProcessor
     {

@@ -1,7 +1,7 @@
 using System.Net.Http;
 using Core2WebApi.Models;
 
-namespace Core2WebApi.Services.BrokerService
+namespace Core2WebApi.Services.BrokersService
 {
     public interface IBrokersService
     {
