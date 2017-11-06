@@ -13,7 +13,7 @@ namespace Core2WebApi.Data.SqlServer
         public QueryResult<Broker> GetBrokers(PagedDataRequest requestInfo)
         {
             var startIndex = ResultsPagingUtility.CalculateStartIndex(requestInfo.PageNumber, requestInfo.PageSize);
-            var context = new InformingDBContext();
+            var context = new BrokerDBContext();
             var query = context.Broker;
             var totalItemCount = query.Count();
             var brokers = query.Skip(startIndex).Take(requestInfo.PageSize).ToList();

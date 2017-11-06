@@ -44,6 +44,13 @@ namespace Core2WebApi
             });
 
             AddBindings(services);
+            AddDbContexts(services);
+        }
+
+        private void AddDbContexts(IServiceCollection services)
+        {
+            services.AddDbContext<InformingDBContext>(options =>
+                options.UseSq)
         }
 
         private void AddBindings(IServiceCollection services)

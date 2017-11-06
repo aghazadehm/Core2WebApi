@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Core2WebApi.Data.Entities
 {
-    public partial class InformingDBContext : DbContext
+    public partial class BrokerDBContext : DbContext
     {
         public virtual DbSet<Broker> Broker { get; set; }
 
