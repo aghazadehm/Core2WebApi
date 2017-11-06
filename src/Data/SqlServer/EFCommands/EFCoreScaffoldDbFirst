@@ -1,0 +1,2 @@
+dotnet ef dbcontext scaffold "Data Source=172.16.1.122;Initial Catalog=InformingDB;Persist Security Info=True;User ID=aghazadeh;Password=249
+4829" Microsoft.EntityFrameworkCore.SqlServer -o "Data/Entities"
