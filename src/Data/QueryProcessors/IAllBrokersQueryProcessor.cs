@@ -5,6 +5,6 @@ namespace Core2WebApi.Data.QueryProcessors
 {
     public interface IAllBrokersQueryProcessor
     {
-         QueryResult<Broker> GetBrokers(PagedDataRequest requestInfo);
+         QueryResult<DimBroker> GetBrokers(PagedDataRequest requestInfo);
     }
 }

@@ -1,0 +1,116 @@
+2017-11-08T17:11:55.2978112+03:30 0HL96LPSS7BPR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2017-11-08T17:11:55.5008713+03:30 0HL96LPSS7BPR:00000001 [INF] Request finished in 212.1228ms 404  (791a596a)
+2017-11-08T17:11:55.5234416+03:30 0HL96LPSS7BPT:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/robots.txt   (ca22a1cb)
+2017-11-08T17:11:55.5238443+03:30 0HL96LPSS7BPT:00000001 [INF] Request finished in 0.4457ms 404  (791a596a)
+2017-11-08T17:12:04.4547480+03:30 0HL96LPSS7BPR:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers   (ca22a1cb)
+2017-11-08T17:12:04.6117623+03:30 0HL96LPSS7BPR:00000002 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-08T17:18:36.0905259+03:30 0HL96LTKAMPUM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2017-11-08T17:18:36.2585893+03:30 0HL96LTKAMPUM:00000001 [INF] Request finished in 178.5586ms 404  (791a596a)
+2017-11-08T17:18:42.4136527+03:30 0HL96LTKAMPUM:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers   (ca22a1cb)
+2017-11-08T17:18:42.5644047+03:30 0HL96LTKAMPUM:00000002 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-08T17:23:52.6471438+03:30 0HL96M0ILDVC0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2017-11-08T17:23:52.8178364+03:30 0HL96M0ILDVC0:00000001 [INF] Request finished in 178.9159ms 404  (791a596a)
+2017-11-08T17:24:06.7656480+03:30 0HL96M0ILDVC0:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers   (ca22a1cb)
+2017-11-08T17:24:06.9177583+03:30 0HL96M0ILDVC0:00000002 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-08T17:24:07.4304708+03:30 0HL96M0ILDVC0:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-08T17:24:07.5020496+03:30 0HL96M0ILDVC0:00000002 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 618.1809ms (afa2e885)
+2017-11-08T17:24:07.5029387+03:30 0HL96M0ILDVC0:00000002 [INF] Request finished in 737.3126ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-08T17:24:07.7157041+03:30 0HL96M0ILDVC0:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico   (ca22a1cb)
+2017-11-08T17:24:07.7160085+03:30 0HL96M0ILDVC0:00000003 [INF] Request finished in 0.3404ms 404  (791a596a)
+2017-11-08T17:27:17.9910790+03:30 0HL96M0ILDVC0:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers?pagenumber=2&pagesize=25%22   (ca22a1cb)
+2017-11-08T17:27:17.9948064+03:30 0HL96M0ILDVC0:00000004 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-08T17:27:18.0431302+03:30 0HL96M0ILDVC0:00000004 [ERR] [null] (12807b18)
+2017-11-08T17:27:25.3844323+03:30 0HL96M0ILDVC2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers?pagenumber=2&pagesize=25   (ca22a1cb)
+2017-11-08T17:27:25.3851855+03:30 0HL96M0ILDVC0:00000004 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 7392.9329ms (afa2e885)
+2017-11-08T17:27:25.3853576+03:30 0HL96M0ILDVC2:00000001 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-08T17:27:25.4101851+03:30 0HL96M0ILDVC0:00000004 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.Net.Http.HttpRequestException: BadRequest ---> System.Exception: 25" is not a valid value for Int32. ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.ComponentModel.Int32Converter.FromString(String value, NumberFormatInfo formatInfo)
+   at System.ComponentModel.BaseNumberConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   --- End of inner exception stack trace ---
+   at System.ComponentModel.BaseNumberConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.NullableConverter.ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, Object value)
+   at System.ComponentModel.TypeConverter.ConvertFromString(String text)
+   at Core2WebApi.Common.PrimitiveTypeParser.Parse[T](String valueAsString) in d:\VS_Code\Core2WebApi\src\Common\PrimitiveTypeParser.cs:line 10
+   at Core2WebApi.Services.InquiryProcessing.PagedDataRequestFactory.Create(Uri requestUri) in d:\VS_Code\Core2WebApi\src\Services\InquiryProcessing\PagedDataRequestFactory.cs:line 36
+   --- End of inner exception stack trace ---
+   at Core2WebApi.Services.InquiryProcessing.PagedDataRequestFactory.Create(Uri requestUri) in d:\VS_Code\Core2WebApi\src\Services\InquiryProcessing\PagedDataRequestFactory.cs:line 43
+   at Core2WebApi.Services.BrokersService.BrokersService.GetBroekrs(HttpRequestMessage requestMessage) in d:\VS_Code\Core2WebApi\src\Services\BrokersService\BrokersService.cs:line 22
+   at Core2WebApi.Controllers.V1.BrokersController.Get(HttpRequestMessage requestMessage) in d:\VS_Code\Core2WebApi\src\Controllers\V1\BrokersController.cs:line 23
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-11-08T17:27:25.4205359+03:30 0HL96M0ILDVC2:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-08T17:27:25.4211353+03:30 0HL96M0ILDVC2:00000001 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 36.2629ms (afa2e885)
+2017-11-08T17:27:25.4212087+03:30 0HL96M0ILDVC2:00000001 [INF] Request finished in 36.8359ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-08T17:27:25.4852734+03:30 0HL96M0ILDVC0:00000004 [INF] Request finished in 7494.222ms 500 text/html; charset=utf-8 (791a596a)
+2017-11-08T17:27:37.4721078+03:30 0HL96M0ILDVC2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers?pagenumber=3&pagesize=25   (ca22a1cb)
+2017-11-08T17:27:37.4725847+03:30 0HL96M0ILDVC2:00000002 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-08T17:27:37.5038695+03:30 0HL96M0ILDVC2:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-08T17:27:37.5042368+03:30 0HL96M0ILDVC2:00000002 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 31.8988ms (afa2e885)
+2017-11-08T17:27:37.5043175+03:30 0HL96M0ILDVC2:00000002 [INF] Request finished in 32.24ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-08T17:27:41.5495848+03:30 0HL96M0ILDVC2:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers?pagenumber=3&pagesize=25   (ca22a1cb)
+2017-11-08T17:27:41.5500102+03:30 0HL96M0ILDVC2:00000003 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-08T17:27:41.5672862+03:30 0HL96M0ILDVC2:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-08T17:27:41.5676594+03:30 0HL96M0ILDVC2:00000003 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 17.8863ms (afa2e885)
+2017-11-08T17:27:41.5677294+03:30 0HL96M0ILDVC2:00000003 [INF] Request finished in 18.1837ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-08T17:27:46.7099400+03:30 0HL96M0ILDVC2:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers?pagenumber=4&pagesize=25   (ca22a1cb)
+2017-11-08T17:27:46.7103531+03:30 0HL96M0ILDVC2:00000004 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-08T17:27:46.7536410+03:30 0HL96M0ILDVC2:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-08T17:27:46.7540003+03:30 0HL96M0ILDVC2:00000004 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 43.8708ms (afa2e885)
+2017-11-08T17:27:46.7540649+03:30 0HL96M0ILDVC2:00000004 [INF] Request finished in 44.1686ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-08T17:27:51.3121277+03:30 0HL96M0ILDVC2:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers?pagenumber=5&pagesize=25   (ca22a1cb)
+2017-11-08T17:27:51.3126069+03:30 0HL96M0ILDVC2:00000005 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-08T17:27:51.3259737+03:30 0HL96M0ILDVC2:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-08T17:27:51.3261282+03:30 0HL96M0ILDVC2:00000005 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 13.8234ms (afa2e885)
+2017-11-08T17:27:51.3262508+03:30 0HL96M0ILDVC2:00000005 [INF] Request finished in 14.1097ms 200 application/json; charset=utf-8 (791a596a)
