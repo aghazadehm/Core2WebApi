@@ -1,34 +1,38 @@
-using Core2WebApi.Data.Entities;
+﻿using System;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Core2WebApi.Data.Entities
 {
-    public partial class BrokerDBContext : DbContext
+    public partial class InformingDBContext : DbContext
     {
-        public virtual DbSet<Broker> Broker { get; set; }
+        public virtual DbSet<DimBroker> DimBroker { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=172.16.1.122;Initial Catalog=InformingDB;Persist Security Info=True;User ID=aghazadeh;Password=2494829");
+                optionsBuilder.UseSqlServer(Configuring.GetConnectionAtring("InformingDb"));
+                //(@"Data Source=172.16.1.122;Initial Catalog=InformingDB;Persist Security Info=True;User ID =aghazadeh;Password=2494829");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Broker>(entity =>
+            modelBuilder.Entity<DimBroker>(entity =>
             {
                 entity.HasKey(e => e.BrokerKey)
                     .ForSqlServerIsClustered(false);
 
+                entity.ToTable("DimBroker", "Baseinfo");
+
                 entity.HasIndex(e => e.BrokerDerivativeKey)
-                    .HasName("UniqueExceptNullsDerivKeyBroker")
+                    .HasName("UniqueExceptNullsDerivKeyDimBroker")
                     .IsUnique()
                     .HasFilter("([BrokerDerivativeKey] IS NOT NULL)");
 
                 entity.HasIndex(e => e.BrokerSpotKey)
-                    .HasName("UniqueExceptNullsSpotKeyBroker")
+                    .HasName("UniqueExceptNullsSpotKeyDimBroker")
                     .IsUnique()
                     .HasFilter("([BrokerSpotKey] IS NOT NULL)");
 

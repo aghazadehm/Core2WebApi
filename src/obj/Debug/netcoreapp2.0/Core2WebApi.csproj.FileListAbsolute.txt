@@ -1,10 +1,10 @@
+D:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.csproj.CoreCompileInputs.cache
+D:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.AssemblyInfoInputs.cache
+D:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.AssemblyInfo.cs
 D:\VS_Code\Core2WebApi\src\bin\Debug\netcoreapp2.0\Core2WebApi.deps.json
 D:\VS_Code\Core2WebApi\src\bin\Debug\netcoreapp2.0\Core2WebApi.runtimeconfig.json
 D:\VS_Code\Core2WebApi\src\bin\Debug\netcoreapp2.0\Core2WebApi.runtimeconfig.dev.json
 D:\VS_Code\Core2WebApi\src\bin\Debug\netcoreapp2.0\Core2WebApi.dll
 D:\VS_Code\Core2WebApi\src\bin\Debug\netcoreapp2.0\Core2WebApi.pdb
-D:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.csproj.CoreCompileInputs.cache
-D:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.AssemblyInfoInputs.cache
-D:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.AssemblyInfo.cs
 D:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.dll
 D:\VS_Code\Core2WebApi\src\obj\Debug\netcoreapp2.0\Core2WebApi.pdb

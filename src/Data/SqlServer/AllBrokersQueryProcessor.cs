@@ -12,13 +12,15 @@ namespace Core2WebApi.Data.SqlServer
         }
         public QueryResult<Broker> GetBrokers(PagedDataRequest requestInfo)
         {
-            var startIndex = ResultsPagingUtility.CalculateStartIndex(requestInfo.PageNumber, requestInfo.PageSize);
-            var context = new BrokerDBContext();
-            var query = context.Broker;
-            var totalItemCount = query.Count();
-            var brokers = query.Skip(startIndex).Take(requestInfo.PageSize).ToList();
-            var queryResult = new QueryResult<Broker>(brokers, totalItemCount, requestInfo.PageSize);
-            return queryResult;
+            // var startIndex = ResultsPagingUtility.CalculateStartIndex(requestInfo.PageNumber, requestInfo.PageSize);
+            // var context = new BrokerDBContext();
+            // var query = context.Broker;
+            // var totalItemCount = query.Count();
+            // var brokers = query.Skip(startIndex).Take(requestInfo.PageSize).ToList();
+            // var queryResult = new QueryResult<Broker>(brokers, totalItemCount, requestInfo.PageSize);
+            // return queryResult;
+
+            return null;
         }
     }
 }
