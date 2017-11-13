@@ -2,7 +2,7 @@ using System.Linq;
 using Core2WebApi.Data.Entities;
 using Core2WebApi.Data.QueryProcessors;
 
-namespace Core2WebApi.Data.SqlServer
+namespace Core2WebApi.Data.SqlServer.QueryProcessors
 {
     public class AllBrokersQueryProcessor : IAllBrokersQueryProcessor
     {

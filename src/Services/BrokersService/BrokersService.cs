@@ -10,11 +10,13 @@ namespace Core2WebApi.Services.BrokersService
     public class BrokersService : IBrokersService
     {
         private readonly IAllBrokersInquiryProcessor _allBrokersInquiryProcessor;
+        private readonly IBrokerByIdInquiryProcessor _brokerByIdInquiryProcessor;
         private readonly IPagedDataRequestFactory _pagedDataRequestFactory;
         public BrokersService(IBrokerServiceDependencyBlock brokerServiceDependencyBlock)
         {
             _allBrokersInquiryProcessor = brokerServiceDependencyBlock.AllBrokersInquiryProcessor;
             _pagedDataRequestFactory = brokerServiceDependencyBlock.PagedDataRequestFactory;
+            _brokerByIdInquiryProcessor = brokerServiceDependencyBlock.BrokerByIdInquiryProcessor;
         }
         public List<Broker> _brokers { get; set; } = new List<Broker>();
         public PagedDataInquiryResponse<Broker> GetBroekrs(HttpRequestMessage requestMessage)
@@ -26,7 +28,8 @@ namespace Core2WebApi.Services.BrokersService
 
         public Broker GetById(int id)
         {
-            return _brokers.FirstOrDefault(x => x.Id == id);
+            var broker = _brokerByIdInquiryProcessor.GetBroker(id);
+            return broker;
         }
     }
 }
