@@ -10,8 +10,8 @@ namespace Core2WebApi.Data.SqlServer.QueryProcessors {
         public BrokerByIdQueryProcessor (InformingDBContext context) {
             _context = context;
         }
-        public DimBroker GetBroker (int brokerId) {
-            var brokers = _context.Set<DimBroker> ();
+        public Broker GetBroker (int brokerId) {
+            var brokers = _context.Set<Broker> ();
             var broker = brokers.SingleOrDefault (b => b.BrokerKey == brokerId);
             return broker;
         }

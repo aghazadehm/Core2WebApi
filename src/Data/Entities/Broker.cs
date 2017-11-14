@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Core2WebApi.Data.Entities
 {
-    public partial class DimBroker
+    public partial class Broker
     {
         public int BrokerKey { get; set; }
         public int? BrokerSpotKey { get; set; }

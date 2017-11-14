@@ -1,0 +1,27 @@
+2017-11-14T10:56:41.2525479+03:30 0HL9B646DGGL1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2017-11-14T10:56:41.4587626+03:30 0HL9B646DGGL1:00000001 [INF] Request finished in 215.3376ms 404  (791a596a)
+2017-11-14T10:56:41.4718136+03:30 0HL9B646DGGL2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/robots.txt   (ca22a1cb)
+2017-11-14T10:56:41.4722901+03:30 0HL9B646DGGL2:00000001 [INF] Request finished in 0.5441ms 404  (791a596a)
+2017-11-14T10:56:59.8449465+03:30 0HL9B646DGGL1:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers/1   (ca22a1cb)
+2017-11-14T10:57:00.0323876+03:30 0HL9B646DGGL1:00000002 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["1"]) - ModelState is Valid (ba7f4ac2)
+2017-11-14T10:58:29.4726283+03:30 0HL9B656LFKD0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2017-11-14T10:58:29.6830530+03:30 0HL9B656LFKD0:00000001 [INF] Request finished in 219.1289ms 404  (791a596a)
+2017-11-14T10:58:33.1852714+03:30 0HL9B656LFKD0:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers/1   (ca22a1cb)
+2017-11-14T10:58:33.3309506+03:30 0HL9B656LFKD0:00000002 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["1"]) - ModelState is Valid (ba7f4ac2)
+2017-11-14T10:58:33.7720747+03:30 0HL9B656LFKD0:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-14T10:58:33.8304172+03:30 0HL9B656LFKD0:00000002 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 570.2926ms (afa2e885)
+2017-11-14T10:58:33.8312142+03:30 0HL9B656LFKD0:00000002 [INF] Request finished in 645.9704ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-14T10:58:37.2936754+03:30 0HL9B656LFKD0:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers   (ca22a1cb)
+2017-11-14T10:58:37.3557169+03:30 0HL9B656LFKD0:00000003 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-14T10:58:37.4039284+03:30 0HL9B656LFKD0:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-14T10:58:37.4091108+03:30 0HL9B656LFKD0:00000003 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 65.2636ms (afa2e885)
+2017-11-14T10:58:37.4092019+03:30 0HL9B656LFKD0:00000003 [INF] Request finished in 115.574ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-14T10:58:40.6959385+03:30 0HL9B656LFKD0:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers?pagenumber=2&pagesize=25   (ca22a1cb)
+2017-11-14T10:58:40.6984512+03:30 0HL9B656LFKD0:00000004 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-14T10:58:40.7082878+03:30 0HL9B656LFKD0:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-14T10:58:40.7086640+03:30 0HL9B656LFKD0:00000004 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 12.1453ms (afa2e885)
+2017-11-14T10:58:40.7087275+03:30 0HL9B656LFKD0:00000004 [INF] Request finished in 12.8508ms 200 application/json; charset=utf-8 (791a596a)

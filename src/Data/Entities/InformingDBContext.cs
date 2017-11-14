@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Core2WebApi.Data.Entities {
         public partial class InformingDBContext : DbContext {
-            public virtual DbSet<DimBroker> DimBroker { get; set; }
+            public virtual DbSet<Broker> Brokers { get; set; }
 
             protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder) {
                 if (!optionsBuilder.IsConfigured) {
@@ -16,19 +16,19 @@ namespace Core2WebApi.Data.Entities {
                 }
 
                 protected override void OnModelCreating (ModelBuilder modelBuilder) {
-                    modelBuilder.Entity<DimBroker> (entity => {
+                    modelBuilder.Entity<Broker> (entity => {
                         entity.HasKey (e => e.BrokerKey)
                             .ForSqlServerIsClustered (false);
 
-                        entity.ToTable ("DimBroker", "Baseinfo");
+                        entity.ToTable ("Brokers", "Baseinfo");
 
                         entity.HasIndex (e => e.BrokerDerivativeKey)
-                            .HasName ("UniqueExceptNullsDerivKeyDimBroker")
+                            .HasName ("UniqueExceptNullsDerivKeyBrokers")
                             .IsUnique ()
                             .HasFilter ("([BrokerDerivativeKey] IS NOT NULL)");
 
                         entity.HasIndex (e => e.BrokerSpotKey)
-                            .HasName ("UniqueExceptNullsSpotKeyDimBroker")
+                            .HasName ("UniqueExceptNullsSpotKeyBrokers")
                             .IsUnique ()
                             .HasFilter ("([BrokerSpotKey] IS NOT NULL)");
 

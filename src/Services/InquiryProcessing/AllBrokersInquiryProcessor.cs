@@ -58,7 +58,7 @@ namespace Core2WebApi.Services.InquiryProcessing
                 GetPreviousPageQueryString(inquiryResponse),
                 GetNextPageQueryString(inquiryResponse));
         }
-        public virtual IEnumerable<Broker> GetBrokers(IEnumerable<Core2WebApi.Data.Entities.DimBroker> brokerEntites)
+        public virtual IEnumerable<Broker> GetBrokers(IEnumerable<Core2WebApi.Data.Entities.Broker> brokerEntites)
         {
             var brokers = brokerEntites.Select(x => _mapper.Map<Broker>(x)).ToList();
             brokers.ForEach(x =>

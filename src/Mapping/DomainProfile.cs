@@ -1,5 +1,4 @@
 using AutoMapper;
-using Core2WebApi.Data.Entities;
 using Core2WebApi.Models;
 
 namespace src.Mapping {
@@ -9,9 +8,9 @@ namespace src.Mapping {
         }
 
         private void BrokerMappingProfile () {
-            CreateMap<Broker, DimBroker> ();
+            //CreateMap<Broker, Broker> ();
 
-            CreateMap<DimBroker, Broker> ()
+            CreateMap<Core2WebApi.Data.Entities.Broker, Broker> ()
                 .ForMember (dest => dest.Address, opt => opt.MapFrom (src => src.BrokerAddress))
                 .ForMember (dest => dest.CheifExecutiveOfficer, opt => opt.MapFrom (src => src.BrokerCeoName))
                 .ForMember (dest => dest.DerivativeCode, opt => opt.MapFrom (src => src.BrokerDerivativeKey))

@@ -4,6 +4,6 @@ namespace Core2WebApi.Data.QueryProcessors
 {
     public interface IBrokerByIdQueryProcessor
     {
-         DimBroker GetBroker(int brokerId); 
+         Broker GetBroker(int brokerId); 
     }
 }
