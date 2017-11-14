@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -22,6 +23,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.PlatformAbstractions;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Core2WebApi {
     public class Startup {
@@ -33,13 +36,23 @@ namespace Core2WebApi {
 
         public void ConfigureServices (IServiceCollection services) {
             services.AddAutoMapper ();
-            services.AddMvc ();
+
+            services.AddSwaggerGen (c => {
+                c.SwaggerDoc ("v1", new Info {
+                    Title = "IME API",
+                        Version = "v1",
+                        Description = "فراهم کردن داده های بورس کالای برای فعالین بازار سرمایه",
+                        TermsOfService = "None"
+                });
+            });
+
             services.AddApiVersioning (Options => {
                 Options.ReportApiVersions = true;
                 Options.DefaultApiVersion = new ApiVersion (1, 0);
             });
 
             AddBindings (services);
+            services.AddMvc ();
         }
 
         private void AddBindings (IServiceCollection services) {
@@ -50,14 +63,13 @@ namespace Core2WebApi {
             services.AddSingleton<ICommonLinkService, CommonLinkService> ();
             services.AddSingleton<IPagedDataRequestFactory, PagedDataRequestFactory> ();
 
-            AddDbContexts(services);
+            AddDbContexts (services);
             AddBrokerBindings (services);
 
         }
 
-        private void AddDbContexts(IServiceCollection services)
-        {
-            services.AddDbContext<InformingDBContext>();
+        private void AddDbContexts (IServiceCollection services) {
+            services.AddDbContext<InformingDBContext> ();
         }
 
         private void AddBrokerBindings (IServiceCollection services) {
@@ -73,7 +85,6 @@ namespace Core2WebApi {
 
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure (
             IApplicationBuilder app,
             IHostingEnvironment env,
@@ -96,6 +107,12 @@ namespace Core2WebApi {
                     });
                 });
             }
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger ();
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI (c => {
+                c.SwaggerEndpoint ("/swagger/v1/swagger.json", "My API V1");
+            });
             app.UseMvc ();
         }
     }

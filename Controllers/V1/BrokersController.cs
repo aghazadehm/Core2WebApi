@@ -8,7 +8,7 @@ namespace Core2WebApi.Controllers.V1
 {
     [ApiVersion("1.0")]
     [Route("api/{version:apiVersion}/brokers")]
-    public class BrokersController : ControllerBase
+    public class BrokersController : Controller
     {
         private readonly IBrokersService _brokersService;
         public BrokersController(IBrokersService brokersService)
@@ -17,6 +17,11 @@ namespace Core2WebApi.Controllers.V1
         }
 
         [HttpGet]
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
         public PagedDataInquiryResponse<Broker> Get(HttpRequestMessage requestMessage)
         {
             requestMessage.RequestUri = Request.GetUri();

@@ -1,16 +1,16 @@
 {
-    "version": "0.1.0",
+    "version": "2.0.0",
     "command": "dotnet",
     "isShellCommand": true,
     "args": [],
-    "tasks": [
-        {
-            "taskName": "build",
-            "args": [
-                "${workspaceRoot}/src/Core2WebApi.csproj"
-            ],
-            "isBuildCommand": true,
-            "problemMatcher": "$msCompile"
-        }
-    ]
+    "tasks": [{
+        "taskName": "build",
+        "command": "dotnet",
+        "args": [
+            "build",
+            "${workspaceRoot}/Core2WebApi.csproj"
+        ],
+        "isBuildCommand": true,
+        "problemMatcher": "$msCompile"
+    }]
 }
