@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 namespace Core2WebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class ValuesController : ControllerBase
     {
         private readonly ILogger _logger;
         public ValuesController(ILogger<ValuesController> logger)

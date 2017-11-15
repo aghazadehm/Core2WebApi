@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Core2WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Core2WebApi.Controllers.V1.BrokersController.Get(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            این من=تد برای خواندن اطلاعات کلی کارگزاری هاست
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

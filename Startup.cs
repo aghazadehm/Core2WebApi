@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using System.Xml.XPath;
 using AutoMapper;
 using Core2WebApi.Common;
 using Core2WebApi.Common.Security;
@@ -37,13 +38,19 @@ namespace Core2WebApi {
         public void ConfigureServices (IServiceCollection services) {
             services.AddAutoMapper ();
 
-            services.AddSwaggerGen (c => {
-                c.SwaggerDoc ("v1", new Info {
+            services.AddSwaggerGen (options => {
+                options.SwaggerDoc ("v1", new Info {
                     Title = "IME API",
                         Version = "v1",
                         Description = "فراهم کردن داده های بورس کالای برای فعالین بازار سرمایه",
-                        TermsOfService = "None"
+                        TermsOfService = "None",
+                        Contact = new Contact {
+                            Name = "ime.co.ir/api", Email = "aghazadeh@ime.co.ir", Url = "https://ime.co.ir.api/v1"
+                        }
                 });
+                var filePath = Path.Combine (PlatformServices.Default.Application.ApplicationBasePath, "SWCapi.xml");
+                options.IncludeXmlComments (filePath);
+
             });
 
             services.AddApiVersioning (Options => {

@@ -8,7 +8,7 @@ namespace Core2WebApi.Controllers.V1
 {
     [ApiVersion("1.0")]
     [Route("api/{version:apiVersion}/brokers")]
-    public class BrokersController : Controller
+    public class BrokersController : ControllerBase
     {
         private readonly IBrokersService _brokersService;
         public BrokersController(IBrokersService brokersService)
@@ -16,12 +16,12 @@ namespace Core2WebApi.Controllers.V1
             _brokersService = brokersService;
         }
 
+/// <summary>
+/// این من=تد برای خواندن اطلاعات کلی کارگزاری هاست
+/// </summary>
+/// <param name="requestMessage"></param>
+/// <returns></returns>
         [HttpGet]
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="requestMessage"></param>
-        /// <returns></returns>
         public PagedDataInquiryResponse<Broker> Get(HttpRequestMessage requestMessage)
         {
             requestMessage.RequestUri = Request.GetUri();
