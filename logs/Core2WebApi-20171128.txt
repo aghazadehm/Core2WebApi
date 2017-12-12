@@ -1,0 +1,19 @@
+2017-11-28T11:34:37.2734045+03:30 0HL9M6QLK3LSI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers   (ca22a1cb)
+2017-11-28T11:34:37.6223086+03:30 0HL9M6QLK3LSI:00000001 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-28T11:34:38.0667733+03:30 0HL9M6QLK3LSI:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-28T11:34:38.0885835+03:30 0HL9M6QLK3LSI:00000001 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 569.102ms (afa2e885)
+2017-11-28T11:34:38.0897071+03:30 0HL9M6QLK3LSI:00000001 [INF] Request finished in 823.1426ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-28T11:35:03.3667225+03:30 0HL9M6QLK3LSI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers/1   (ca22a1cb)
+2017-11-28T11:35:03.3700250+03:30 0HL9M6QLK3LSI:00000002 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["1"]) - ModelState is Valid (ba7f4ac2)
+2017-11-28T11:35:03.3946450+03:30 0HL9M6QLK3LSI:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-28T11:35:03.3950854+03:30 0HL9M6QLK3LSI:00000002 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 25.9192ms (afa2e885)
+2017-11-28T11:35:03.3951988+03:30 0HL9M6QLK3LSI:00000002 [INF] Request finished in 28.5272ms 200 application/json; charset=utf-8 (791a596a)
+2017-11-28T11:35:09.9176712+03:30 0HL9M6QLK3LSI:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/1.0/brokers   (ca22a1cb)
+2017-11-28T11:35:09.9184950+03:30 0HL9M6QLK3LSI:00000003 [INF] Executing action method "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" with arguments (["Method: GET, RequestUri: '<null>', Version: 1.1, Content: <null>, Headers:
+{
+}"]) - ModelState is Valid (ba7f4ac2)
+2017-11-28T11:35:09.9236263+03:30 0HL9M6QLK3LSI:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2017-11-28T11:35:09.9239517+03:30 0HL9M6QLK3LSI:00000003 [INF] Executed action "Core2WebApi.Controllers.V1.BrokersController.Get (Core2WebApi)" in 5.8113ms (afa2e885)
+2017-11-28T11:35:09.9240186+03:30 0HL9M6QLK3LSI:00000003 [INF] Request finished in 6.3723ms 200 application/json; charset=utf-8 (791a596a)

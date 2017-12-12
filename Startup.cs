@@ -120,7 +120,9 @@ namespace Core2WebApi {
             app.UseSwaggerUI (c => {
                 c.SwaggerEndpoint ("/swagger/v1/swagger.json", "My API V1");
             });
-            app.UseMvc ();
+            app.UseMvc (r => {
+r.MapRoute("default","{controller}/{action}");
+            });
         }
     }
 }
