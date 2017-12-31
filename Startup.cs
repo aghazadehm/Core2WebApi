@@ -9,12 +9,14 @@ using AutoMapper;
 using Core2WebApi.Common;
 using Core2WebApi.Common.Security;
 using Core2WebApi.Common.Web;
+using Core2WebApi.Controllers.V1.Derivatives.Future;
 using Core2WebApi.Data.Entities;
 using Core2WebApi.Data.QueryProcessors;
 using Core2WebApi.Data.SqlServer.QueryProcessors;
 using Core2WebApi.LinkServices;
 using Core2WebApi.Services.BrokersService;
 using Core2WebApi.Services.InquiryProcessing;
+using Core2WebApi.Services.InquiryProcessing.Derivatives.Future;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
@@ -32,7 +34,6 @@ namespace Core2WebApi {
         public Startup (IConfiguration configuration) {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices (IServiceCollection services) {
@@ -72,11 +73,25 @@ namespace Core2WebApi {
 
             AddDbContexts (services);
             AddBrokerBindings (services);
+            AddFutureContractBinding (services);
 
+        }
+
+        private void AddFutureContractBinding (IServiceCollection services) {
+            services.AddSingleton<IFutureContractLinkService, FutureContractLinkService> ();
+
+            services.AddScoped<IAllFutureContractInquiryProcessor, AllFutureContractInquiryProcessor> ();
+            services.AddSingleton<IAllFutureContractQueryProcessor, AllFutureContractQueryProcessor> ();
+
+            services.AddScoped<IFutureContractControllerDependencyBlock, FutureContractControllerDependencyBlock> ();
+
+            // services.AddSingleton<IBrokerByIdInquiryProcessor, BrokerByIdInquiryProcessor> ();
+            // services.AddSingleton<IBrokerByIdQueryProcessor, BrokerByIdQueryProcessor> ();
         }
 
         private void AddDbContexts (IServiceCollection services) {
             services.AddDbContext<InformingDBContext> ();
+            services.AddDbContext<FutureSnapshotContext> ();
         }
 
         private void AddBrokerBindings (IServiceCollection services) {
@@ -121,7 +136,7 @@ namespace Core2WebApi {
                 c.SwaggerEndpoint ("/swagger/v1/swagger.json", "My API V1");
             });
             app.UseMvc (r => {
-r.MapRoute("default","{controller}/{action}");
+                r.MapRoute ("default", "{controller}/{action}");
             });
         }
     }

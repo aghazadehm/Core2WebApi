@@ -4,12 +4,50 @@
         <name>Core2WebApi</name>
     </assembly>
     <members>
+        <member name="T:Core2WebApi.Controllers.V1.BrokersController">
+            <summary>
+            کنترلر اطلاعات کارگزاری‌ها
+            </summary>
+        </member>
+        <member name="M:Core2WebApi.Controllers.V1.BrokersController.#ctor(Core2WebApi.Services.BrokersService.IBrokersService)">
+            <summary>
+            Broker controller cons
+            </summary>
+            <param name="brokersService"></param>
+        </member>
         <member name="M:Core2WebApi.Controllers.V1.BrokersController.Get(System.Net.Http.HttpRequestMessage)">
             <summary>
-            این من=تد برای خواندن اطلاعات کلی کارگزاری هاست
+            این متد برای خواندن اطلاعات کلی کارگزاری هاست
+            </summary>
+            <param name="requestMessage"></param>``
+            <returns></returns>
+        </member>
+        <member name="T:Core2WebApi.Controllers.V1.Derivatives.Future.ContractsController">
+            <summary>
+            برای دریافت اطلاعات فراردادهای آتی 
+            </summary>
+        </member>
+        <member name="M:Core2WebApi.Controllers.V1.Derivatives.Future.ContractsController.#ctor(Core2WebApi.Controllers.V1.Derivatives.Future.IFutureContractControllerDependencyBlock)">
+            <summary>
+            سازنده
+            </summary>
+        </member>
+        <member name="M:Core2WebApi.Controllers.V1.Derivatives.Future.ContractsController.GetContracts(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            دریافت اطلاعات قراردادهای آتی
             </summary>
             <param name="requestMessage"></param>
             <returns></returns>
+        </member>
+        <member name="M:Core2WebApi.Controllers.V1.Derivatives.Option.OptionContractsController.#ctor(Core2WebApi.Controllers.V1.Derivatives.Option.IOptionContractControllerDependencyBlock)">
+            <summary>
+            سازنده
+            </summary>
+        </member>
+        <member name="T:Core2WebApi.Models.Derivatives.Future.FutureContract">
+            <summary>
+            فرارداد آتی
+            </summary>
         </member>
     </members>
 </doc>

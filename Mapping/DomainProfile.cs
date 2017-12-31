@@ -1,10 +1,29 @@
+using System;
 using AutoMapper;
 using Core2WebApi.Models;
+using Core2WebApi.Models.Derivatives.Future;
 
 namespace src.Mapping {
     public class DomainProfile : Profile {
         public DomainProfile () {
             BrokerMappingProfile ();
+            FutureContractMapping ();
+        }
+
+        private void FutureContractMapping () {
+            CreateMap<Core2WebApi.Data.Entities.ContractFuture, FutureContract> ()
+                .ForMember (dest => dest.CommodityAbbreviation, opt => opt.MapFrom (src => src.CommodityAbbreviation))
+                .ForMember (dest => dest.CommodityID, opt => opt.MapFrom (src => src.CommodityId))
+                .ForMember (dest => dest.CommodityName, opt => opt.MapFrom (src => src.CommodityName))
+                .ForMember (dest => dest.CommoditySymbol, opt => opt.MapFrom (src => src.CommoditySymbol))
+                .ForMember (dest => dest.ContractCode, opt => opt.MapFrom (src => src.ContractCode))
+                .ForMember (dest => dest.ContractDescription, opt => opt.MapFrom (src => src.ContractDescription))
+                .ForMember (dest => dest.ContractID, opt => opt.MapFrom (src => src.ContractId))
+                .ForMember (dest => dest.ContractSize, opt => opt.MapFrom (src => src.ContractSize))
+                .ForMember (dest => dest.FirstTradingDate, opt => opt.MapFrom (src => src.FirstTradingDate))
+                .ForMember (dest => dest.LastIM, opt => opt.MapFrom (src => src.LastIm))
+                .ForMember (dest => dest.LastMM, opt => opt.MapFrom (src => src.LastMm))
+                .ForMember (dest => dest.LastTradingDate, opt => opt.MapFrom (src => src.LastTradingDate));
         }
 
         private void BrokerMappingProfile () {

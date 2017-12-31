@@ -1,2 +1,3 @@
-dotnet ef dbcontext scaffold "Data Source=172.16.1.122;Initial Catalog=InformingDB;Persist Security Info=True;User ID=aghazadeh;Password=249
-4829" Microsoft.EntityFrameworkCore.SqlServer -o "Data/Entities" -t "Baseinfo.Brokers"
+dotnet ef dbcontext scaffold "Data Source=172.16.1.122;Initial Catalog=InformingDB;Persist Security Info=True;User ID=aghazadeh;Password=2494829" Microsoft.EntityFrameworkCore.SqlServer -o "Data/Entities" -t "Baseinfo.Brokers"
+
+dotnet ef dbcontext scaffold "Data Source=172.16.1.122;Initial Catalog=FutureSnapshot;Persist Security Info=True;User ID=aghazadeh;Password=2494829" Microsoft.EntityFrameworkCore.SqlServer -o "Data/Entities" -t "Contract.Contract_Future"
