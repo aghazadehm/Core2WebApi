@@ -27,7 +27,7 @@
             برای دریافت اطلاعات فراردادهای آتی 
             </summary>
         </member>
-        <member name="M:Core2WebApi.Controllers.V1.Derivatives.Future.ContractsController.#ctor(Core2WebApi.Controllers.V1.Derivatives.Future.IFutureContractControllerDependencyBlock)">
+        <member name="M:Core2WebApi.Controllers.V1.Derivatives.Future.ContractsController.#ctor(Core2WebApi.Services.Derivatives.Future.IFutureContractsDependencyBlock)">
             <summary>
             سازنده
             </summary>
@@ -39,7 +39,7 @@
             <param name="requestMessage"></param>
             <returns></returns>
         </member>
-        <member name="M:Core2WebApi.Controllers.V1.Derivatives.Option.OptionContractsController.#ctor(Core2WebApi.Controllers.V1.Derivatives.Option.IOptionContractControllerDependencyBlock)">
+        <member name="M:Core2WebApi.Controllers.V1.Derivatives.Option.OptionContractsController.#ctor(Core2WebApi.Services.Derivatives.Option.IOptionContractsDependencyBlock)">
             <summary>
             سازنده
             </summary>

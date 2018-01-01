@@ -1,6 +1,7 @@
 using System.Net.Http;
 using Core2WebApi.Models;
 using Core2WebApi.Models.Derivatives.Future;
+using Core2WebApi.Services.Derivatives.Future;
 using Core2WebApi.Services.InquiryProcessing;
 using Core2WebApi.Services.InquiryProcessing.Derivatives.Future;
 using Microsoft.AspNetCore.Mvc;
@@ -19,9 +20,9 @@ namespace Core2WebApi.Controllers.V1.Derivatives.Future {
         /// <summary>
         /// سازنده
         /// </summary>
-        public ContractsController (IFutureContractControllerDependencyBlock futureContractControllerDependencyBlock) {
-            _allFutureContractInquiryProcessor = futureContractControllerDependencyBlock.AllFutureContractInquiryProcessor;
-            _padedDataRequestFactory = futureContractControllerDependencyBlock.PagedDataRequestFactory;
+        public ContractsController (IFutureContractsDependencyBlock futureContractDependencyBlock) {
+            _allFutureContractInquiryProcessor = futureContractDependencyBlock.AllFutureContractInquiryProcessor;
+            _padedDataRequestFactory = futureContractDependencyBlock.PagedDataRequestFactory;
             //_futureContractByIdInquiryProcessor = futureContractControllerDependencyBlock.FutureContractByIdInquiryProcessor;
         }
 

@@ -15,6 +15,7 @@ using Core2WebApi.Data.QueryProcessors;
 using Core2WebApi.Data.SqlServer.QueryProcessors;
 using Core2WebApi.LinkServices;
 using Core2WebApi.Services.BrokersService;
+using Core2WebApi.Services.Derivatives.Future;
 using Core2WebApi.Services.InquiryProcessing;
 using Core2WebApi.Services.InquiryProcessing.Derivatives.Future;
 using Microsoft.AspNetCore.Builder;
@@ -83,7 +84,7 @@ namespace Core2WebApi {
             services.AddScoped<IAllFutureContractInquiryProcessor, AllFutureContractInquiryProcessor> ();
             services.AddSingleton<IAllFutureContractQueryProcessor, AllFutureContractQueryProcessor> ();
 
-            services.AddScoped<IFutureContractControllerDependencyBlock, FutureContractControllerDependencyBlock> ();
+            services.AddScoped<IFutureContractsDependencyBlock, FutureContractsDependencyBlock> ();
 
             // services.AddSingleton<IBrokerByIdInquiryProcessor, BrokerByIdInquiryProcessor> ();
             // services.AddSingleton<IBrokerByIdQueryProcessor, BrokerByIdQueryProcessor> ();

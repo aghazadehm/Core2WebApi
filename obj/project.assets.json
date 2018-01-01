@@ -13048,11 +13048,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VS_Code\\Core2WebApi\\Core2WebApi.csproj",
+      "projectUniqueName": "d:\\VS_Code\\Core2WebApi\\Core2WebApi.csproj",
       "projectName": "Core2WebApi",
-      "projectPath": "D:\\VS_Code\\Core2WebApi\\Core2WebApi.csproj",
+      "projectPath": "d:\\VS_Code\\Core2WebApi\\Core2WebApi.csproj",
       "packagesPath": "C:\\Users\\aghazadeh\\.nuget\\packages\\",
-      "outputPath": "D:\\VS_Code\\Core2WebApi\\obj\\",
+      "outputPath": "d:\\VS_Code\\Core2WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
