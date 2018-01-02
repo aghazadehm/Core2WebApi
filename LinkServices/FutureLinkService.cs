@@ -20,17 +20,17 @@ namespace Core2WebApi.LinkServices {
         }
 
         public void AddSelfLink (FutureContract contract) {
-            contract.AddLink(GetSelfLink(contract.ContractID));
+            contract.AddLink (GetSelfLink (contract.ContractID));
         }
 
         public Link GetAllFutureContractsLink () {
-            const string pathFragment = "futureContracts";
+            const string pathFragment = "derivatives/future/contracts";
             return _commonLinkService.GetLink (pathFragment, Constants.CommonLinkRelValues.All, HttpMethod.Get);
         }
 
         public Link GetSelfLink (long contractId) {
-            var pathFragment = string.Format ("futureContracts/{0}", contractId);
-            var link = _commonLinkService.GetLink(pathFragment, Constants.CommonLinkRelValues.Self,HttpMethod.Get);
+            var pathFragment = string.Format ("derivatives/future/contracts/{0}", contractId);
+            var link = _commonLinkService.GetLink (pathFragment, Constants.CommonLinkRelValues.Self, HttpMethod.Get);
             return link;
         }
     }

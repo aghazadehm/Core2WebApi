@@ -18,7 +18,7 @@ namespace Core2WebApi.Services.BrokersService
             _pagedDataRequestFactory = brokerServiceDependencyBlock.PagedDataRequestFactory;
             _brokerByIdInquiryProcessor = brokerServiceDependencyBlock.BrokerByIdInquiryProcessor;
         }
-        public List<Broker> _brokers { get; set; } = new List<Broker>();
+        //public List<Broker> _brokers { get; set; } = new List<Broker>();
         public PagedDataInquiryResponse<Broker> GetBroekrs(HttpRequestMessage requestMessage)
         {
             var request = _pagedDataRequestFactory.Create(requestMessage.RequestUri);

@@ -27,12 +27,12 @@
             برای دریافت اطلاعات فراردادهای آتی 
             </summary>
         </member>
-        <member name="M:Core2WebApi.Controllers.V1.Derivatives.Future.ContractsController.#ctor(Core2WebApi.Services.Derivatives.Future.IFutureContractsDependencyBlock)">
+        <member name="M:Core2WebApi.Controllers.V1.Derivatives.Future.ContractsController.#ctor(Core2WebApi.Services.Derivatives.Future.IFutureContractsService)">
             <summary>
             سازنده
             </summary>
         </member>
-        <member name="M:Core2WebApi.Controllers.V1.Derivatives.Future.ContractsController.GetContracts(System.Net.Http.HttpRequestMessage)">
+        <member name="M:Core2WebApi.Controllers.V1.Derivatives.Future.ContractsController.Get(System.Net.Http.HttpRequestMessage)">
             <summary>
             دریافت اطلاعات قراردادهای آتی
             </summary>
@@ -48,6 +48,38 @@
             <summary>
             فرارداد آتی
             </summary>
+        </member>
+        <member name="T:Core2WebApi.Startup">
+            <summary>
+            Startup Class
+            </summary>
+        </member>
+        <member name="M:Core2WebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Core2WebApi.Startup.Configuration">
+            <summary>
+            Configuration
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Core2WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            ConfigureServices
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Core2WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,Core2WebApi.Common.IApplicationInfo)">
+            <summary>
+            Configure
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="loggerFactory"></param>
+            <param name="applicationInfo"></param>
         </member>
     </members>
 </doc>

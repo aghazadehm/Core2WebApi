@@ -2,34 +2,32 @@ using System;
 using System.Text;
 using Microsoft.AspNetCore.Http;
 
-namespace src.Common.Extensions
+namespace Core2WebApi.Common.Extensions 
 {
-    public static class HttpRequestExtensions
-    {
-        public static Uri GetUri(this HttpRequest request)
-        {
+    public static class HttpRequestExtensions {
+        public static Uri GetUri (this HttpRequest request) {
             if (null == request)
-                throw new ArgumentNullException("request");
+                throw new ArgumentNullException ("request");
 
-            if (true == string.IsNullOrWhiteSpace(request.Scheme))
-                throw new ArgumentException("Http request Scheme is not specified");
+            if (true == string.IsNullOrWhiteSpace (request.Scheme))
+                throw new ArgumentException ("Http request Scheme is not specified");
 
             if (false == request.Host.HasValue)
-                throw new ArgumentException("Http request Host is not specified");
+                throw new ArgumentException ("Http request Host is not specified");
 
-            var builder = new StringBuilder();
+            var builder = new StringBuilder ();
 
-            builder.Append(request.Scheme)
-                .Append("://")
-                .Append(request.Host);
+            builder.Append (request.Scheme)
+                .Append ("://")
+                .Append (request.Host);
 
             if (true == request.Path.HasValue)
-                builder.Append(request.Path.Value);
+                builder.Append (request.Path.Value);
 
             if (true == request.QueryString.HasValue)
-                builder.Append(request.QueryString);
+                builder.Append (request.QueryString);
 
-            return new Uri(builder.ToString());
+            return new Uri (builder.ToString ());
         }
     }
 }

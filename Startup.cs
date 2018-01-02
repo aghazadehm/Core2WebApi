@@ -31,12 +31,27 @@ using Microsoft.Extensions.PlatformAbstractions;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Core2WebApi {
+    /// <summary>
+    /// Startup Class
+    /// </summary>
     public class Startup {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup (IConfiguration configuration) {
             Configuration = configuration;
         }
+        /// <summary>
+        /// Configuration
+        /// </summary>
+        /// <returns></returns>
         public IConfiguration Configuration { get; }
 
+        /// <summary>
+        /// ConfigureServices
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices (IServiceCollection services) {
             services.AddAutoMapper ();
 
@@ -77,37 +92,37 @@ namespace Core2WebApi {
             AddFutureContractBinding (services);
 
         }
+        private void AddBrokerBindings (IServiceCollection services) {
+            services.AddScoped<IBrokersService, BrokersService> ();
+            services.AddScoped<IBrokerServiceDependencyBlock, BrokerServiceDependencyBlock> ();
+            services.AddSingleton<IBrokerLinkService, BrokerLinkService> ();
+            services.AddScoped<IAllBrokersInquiryProcessor, AllBrokersInquiryProcessor> ();
+            services.AddSingleton<IAllBrokersQueryProcessor, AllBrokersQueryProcessor> ();
+            services.AddSingleton<IBrokerByIdInquiryProcessor, BrokerByIdInquiryProcessor> ();
+            services.AddSingleton<IBrokerByIdQueryProcessor, BrokerByIdQueryProcessor> ();
 
+        }
         private void AddFutureContractBinding (IServiceCollection services) {
+            services.AddScoped<IFutureContractsService, FutureContractsService> ();
             services.AddSingleton<IFutureContractLinkService, FutureContractLinkService> ();
-
             services.AddScoped<IAllFutureContractInquiryProcessor, AllFutureContractInquiryProcessor> ();
             services.AddSingleton<IAllFutureContractQueryProcessor, AllFutureContractQueryProcessor> ();
-
             services.AddScoped<IFutureContractsDependencyBlock, FutureContractsDependencyBlock> ();
-
-            // services.AddSingleton<IBrokerByIdInquiryProcessor, BrokerByIdInquiryProcessor> ();
-            // services.AddSingleton<IBrokerByIdQueryProcessor, BrokerByIdQueryProcessor> ();
+            services.AddSingleton<IFutureContractByIdInquiryProcessor, FutureContractByIdInquiryProcessor> ();
+            services.AddSingleton<IFutureContractByIdQueryProcessor, FutureContractByIdQueryProcessor> ();
         }
 
         private void AddDbContexts (IServiceCollection services) {
             services.AddDbContext<InformingDBContext> ();
             services.AddDbContext<FutureSnapshotContext> ();
         }
-
-        private void AddBrokerBindings (IServiceCollection services) {
-            services.AddScoped<IBrokersService, BrokersService> ();
-            services.AddScoped<IBrokerServiceDependencyBlock, BrokerServiceDependencyBlock> ();
-            services.AddSingleton<IBrokerLinkService, BrokerLinkService> ();
-
-            services.AddScoped<IAllBrokersInquiryProcessor, AllBrokersInquiryProcessor> ();
-            services.AddSingleton<IAllBrokersQueryProcessor, AllBrokersQueryProcessor> ();
-
-            services.AddSingleton<IBrokerByIdInquiryProcessor, BrokerByIdInquiryProcessor> ();
-            services.AddSingleton<IBrokerByIdQueryProcessor, BrokerByIdQueryProcessor> ();
-
-        }
-
+        /// <summary>
+        /// Configure
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
+        /// <param name="loggerFactory"></param>
+        /// <param name="applicationInfo"></param>
         public void Configure (
             IApplicationBuilder app,
             IHostingEnvironment env,

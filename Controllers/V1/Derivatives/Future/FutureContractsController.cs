@@ -2,8 +2,8 @@ using System.Net.Http;
 using Core2WebApi.Models;
 using Core2WebApi.Models.Derivatives.Future;
 using Core2WebApi.Services.Derivatives.Future;
-using Core2WebApi.Services.InquiryProcessing;
 using Core2WebApi.Services.InquiryProcessing.Derivatives.Future;
+using Microsoft.ApplicationInsights.AspNetCore.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Core2WebApi.Controllers.V1.Derivatives.Future {
@@ -11,19 +11,15 @@ namespace Core2WebApi.Controllers.V1.Derivatives.Future {
     /// برای دریافت اطلاعات فراردادهای آتی 
     /// </summary>
     [ApiVersion ("1.0")]
-    [Route ("api/{version:apiVersion}/contracts")]
+    [Route ("api/{version:apiVersion}/derivatives/future/contracts")]
     public class ContractsController : ControllerBase {
-        private readonly IAllFutureContractInquiryProcessor _allFutureContractInquiryProcessor;
-        private readonly IPagedDataRequestFactory _padedDataRequestFactory;
-        //private readonly IFutureContractByIdInquiryProcessor _futureContractByIdInquiryProcessor;
+        private readonly IFutureContractsService _futureContractsService;
 
         /// <summary>
         /// سازنده
         /// </summary>
-        public ContractsController (IFutureContractsDependencyBlock futureContractDependencyBlock) {
-            _allFutureContractInquiryProcessor = futureContractDependencyBlock.AllFutureContractInquiryProcessor;
-            _padedDataRequestFactory = futureContractDependencyBlock.PagedDataRequestFactory;
-            //_futureContractByIdInquiryProcessor = futureContractControllerDependencyBlock.FutureContractByIdInquiryProcessor;
+        public ContractsController (IFutureContractsService futureContractsService) {
+            _futureContractsService = futureContractsService;
         }
 
         /// <summary>
@@ -33,17 +29,17 @@ namespace Core2WebApi.Controllers.V1.Derivatives.Future {
         /// <returns></returns>
         //[Route ("", Name = "GetContractsRoute")]
         [HttpGet]
-        public PagedDataInquiryResponse<FutureContract> GetContracts (HttpRequestMessage requestMessage) {
-            var request = _padedDataRequestFactory.Create (requestMessage.RequestUri);
-            var conrtacts = _allFutureContractInquiryProcessor.GetContracts (request);
+        public PagedDataInquiryResponse<FutureContract> Get (HttpRequestMessage requestMessage) {
+            requestMessage.RequestUri = Request.GetUri ();
+            var conrtacts = _futureContractsService.GetContracts (requestMessage);
             return conrtacts;
         }
 
-        // [Route ("", Name = "GetFutureContractRoute")]
-
-        // public FutureContract GetFutureContract (int id) {
-        //     var contract = _futureContractByIdInquiryProcessor.GetFutureContract (id);
-        //     return contract;
-        // }
+        //[Route ("", Name = "GetFutureContractRoute")]
+        [HttpGet ("{id}")]
+        public FutureContract Get (int id) {
+            var contract = _futureContractsService.GetById (id);
+            return contract;
+        }
     }
 }

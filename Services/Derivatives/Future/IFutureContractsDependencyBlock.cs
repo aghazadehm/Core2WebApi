@@ -5,6 +5,7 @@ namespace Core2WebApi.Services.Derivatives.Future {
     public interface IFutureContractsDependencyBlock {
         IAllFutureContractInquiryProcessor AllFutureContractInquiryProcessor { get; }
         IPagedDataRequestFactory PagedDataRequestFactory { get; }
+        IFutureContractByIdInquiryProcessor FutureContractByIdInquiry {get;}
         //IFutureContractByIdInquiryProcessor FutureContractByIdInquiryProcessor { get; set; }
     }
 }

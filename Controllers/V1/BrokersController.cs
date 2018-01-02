@@ -2,7 +2,7 @@ using System.Net.Http;
 using Core2WebApi.Models;
 using Core2WebApi.Services.BrokersService;
 using Microsoft.AspNetCore.Mvc;
-using src.Common.Extensions;
+using Core2WebApi.Common.Extensions;
 
 namespace Core2WebApi.Controllers.V1 {
     /// <summary>
