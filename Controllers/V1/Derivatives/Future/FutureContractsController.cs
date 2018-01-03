@@ -12,7 +12,7 @@ namespace Core2WebApi.Controllers.V1.Derivatives.Future {
     /// </summary>
     [ApiVersion ("1.0")]
     [Route ("api/{version:apiVersion}/derivatives/future/contracts")]
-    public class ContractsController : ControllerBase {
+    public class ContractsController : BaseController {
         private readonly IFutureContractsService _futureContractsService;
 
         /// <summary>

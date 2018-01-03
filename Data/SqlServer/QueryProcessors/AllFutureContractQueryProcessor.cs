@@ -12,7 +12,7 @@ namespace Core2WebApi.Data.SqlServer.QueryProcessors {
         public QueryResult<ContractFuture> GetFutureContracts (PagedDataRequest requestInfo) {
             var startIndex = ResultsPagingUtility.CalculateStartIndex (requestInfo.PageNumber, requestInfo.PageSize);
             var context = new FutureSnapshotContext ();
-            var query = context.ContractFutures;
+            var query = context.ContractFuture;
             var totalItemCount = query.Count ();
             var contracts = query.Skip (startIndex).Take (requestInfo.PageSize).ToList ();
             var queryResult = new QueryResult<ContractFuture> (contracts, totalItemCount, requestInfo.PageSize);

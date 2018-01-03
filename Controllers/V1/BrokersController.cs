@@ -10,7 +10,7 @@ namespace Core2WebApi.Controllers.V1 {
     /// </summary>
     [ApiVersion ("1.0")]
     [Route ("api/{version:apiVersion}/brokers")]
-    public class BrokersController : ControllerBase {
+    public class BrokersController : BaseController {
         private readonly IBrokersService _brokersService;
         
         /// <summary>

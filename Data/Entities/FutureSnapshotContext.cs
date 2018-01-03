@@ -6,7 +6,10 @@ namespace Core2WebApi.Data.Entities
 {
     public partial class FutureSnapshotContext : DbContext
     {
-        public virtual DbSet<ContractFuture> ContractFutures { get; set; }
+        public virtual DbSet<ContractFuture> ContractFuture { get; set; }
+        public virtual DbSet<FutureMarketDailyStatistics> FutureMarketDailyStatistics { get; set; }
+
+        // Unable to generate entity type for table 'Contract.SettlementPrice_Future'. Please see the warning messages.
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -52,6 +55,69 @@ namespace Core2WebApi.Data.Entities
                     .HasColumnType("money");
 
                 entity.Property(e => e.LastTradingDate).HasColumnType("smalldatetime");
+            });
+
+            modelBuilder.Entity<FutureMarketDailyStatistics>(entity =>
+            {
+                entity.HasKey(e => new { e.ContractId, e.Dt });
+
+                entity.ToTable("FutureMarketDailyStatistics", "Log");
+
+                entity.Property(e => e.ContractId).HasColumnName("ContractID");
+
+                entity.Property(e => e.Dt)
+                    .HasColumnName("DT")
+                    .HasColumnType("date");
+
+                entity.Property(e => e.CBuy).HasColumnName("C_Buy");
+
+                entity.Property(e => e.CSell).HasColumnName("C_Sell");
+
+                entity.Property(e => e.ContractCode)
+                    .IsRequired()
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.DeliveryDate).HasColumnType("smalldatetime");
+
+                entity.Property(e => e.FirstPrice).HasColumnType("money");
+
+                entity.Property(e => e.LastPrice).HasColumnType("money");
+
+                entity.Property(e => e.LastSettlementPrice).HasColumnType("money");
+
+                entity.Property(e => e.MaxPrice).HasColumnType("money");
+
+                entity.Property(e => e.MinPrice).HasColumnType("money");
+
+                entity.Property(e => e.SettlementPricePercent).HasColumnType("numeric(, 15)");
+
+                entity.Property(e => e.TodaySettlementPrice).HasColumnType("money");
+
+                entity.Property(e => e.TradesValue).HasColumnType("money");
+
+                entity.Property(e => e.ValHaghighiBuy)
+                    .HasColumnName("Val_Haghighi_Buy")
+                    .HasColumnType("money");
+
+                entity.Property(e => e.ValHaghighiSell)
+                    .HasColumnName("Val_Haghighi_Sell")
+                    .HasColumnType("money");
+
+                entity.Property(e => e.ValHoghooghiBuy)
+                    .HasColumnName("Val_Hoghooghi_Buy")
+                    .HasColumnType("money");
+
+                entity.Property(e => e.ValHoghooghiSell)
+                    .HasColumnName("Val_Hoghooghi_Sell")
+                    .HasColumnType("money");
+
+                entity.Property(e => e.VolHaghighiBuy).HasColumnName("Vol_Haghighi_Buy");
+
+                entity.Property(e => e.VolHaghighiSell).HasColumnName("Vol_Haghighi_Sell");
+
+                entity.Property(e => e.VolHoghooghiBuy).HasColumnName("Vol_Hoghooghi_Buy");
+
+                entity.Property(e => e.VolHoghooghiSell).HasColumnName("Vol_Hoghooghi_Sell");
             });
         }
     }

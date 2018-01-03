@@ -7,7 +7,7 @@ using Core2WebApi.Services.InquiryProcessing.Derivatives.Option;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Core2WebApi.Controllers.V1.Derivatives.Option {
-    public class OptionContractsController : ControllerBase {
+    public class OptionContractsController : BaseController {
         private readonly IAllOptionContractInquiryProcessor _allOptionContractInquiryProcessor;
         private readonly IPagedDataRequestFactory _padedDataRequestFactory;
         private readonly IOptionContractByIdInquiryProcessor _optionContractByIdInquiryProcessor;
